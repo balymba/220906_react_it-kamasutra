@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 class Landing extends React.Component {
     redred(){
         return(
-            <p>Hello Main !</p>
+            <p>Hello Main!</p>
         )
     }
 }
