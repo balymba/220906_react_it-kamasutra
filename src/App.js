@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { render } from 'react-dom';
+import './App.css';
+import Profile from './Components/Profile/Profile.jsx';
+import Header from './Components/Header/Header.jsx';
+import Nav from './Components/Nav/Nav.jsx';
+import Dialogs from './Components/Dialogs/Dialogs';
+import { BrowserRouter as Router, Routes, Route, Switch, Outlet, BrowserRouter } from 'react-router-dom';
 
-function App() {
-
-    const [likes, setLikes] = useState(0)
-    const [value1, setValue] = useState('ТЕКСТ')
-    
-    function increment(){
-      setLikes(likes + 1)
-    }
-
-    function decrement(){
-      setLikes(likes - 1)
-    }
-
+const App = () => {
   return (
-    <div className="App">
-      <h1>{likes}</h1>
-      <h1>{value1}</h1>
-      <input 
-        type='text' 
-        value={value1}
-        onChange={event => setValue(event.target.value)}
-      />
-      <button onClick = {increment}>Increment</button>
-      <button onClick = {decrement}>Decrement</button>
-    </div>
-  );
+    <Router>
+      <Routes>
+        {/* <div className='app-wrapper'>
+          <Header />
+          <Nav />
+          <div className='app-wrapper-content'> */}
+            <Route path="/" element={<Profile />} />
+            {/* <Route index element={<Profile />} />
+                <Route path="dialogs" element={<Dialogs />} />
+                <Route path="profile" element={<Profile />} /> */}
+          {/* </div>
+        </div> */}
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
