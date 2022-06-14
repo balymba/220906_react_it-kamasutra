@@ -1,17 +1,18 @@
 import React from "react";
 import style from './Nav.module.css';
 import { NavLink } from 'react-router-dom';
+import BestFriends from "./BestFriends/BestFriends";
 
 const Nav = () => {
+    debugger
     return (
         <nav className={style.nav}>
-            {/* <div className={N.item}> <a href='/profile' alt='test'>Profile</a> </div>
-            <div className={N.item}> <a href='/dialogs' alt='test'>Messages</a> </div>
-            <div className={N.item}> <a href='/news' alt='test'>News</a> </div>
-            <div className={N.item}> <a href='/music' alt='test'>Music</a> </div>
-            <div className={N.item}> <a href='/settings' alt='test'>Settings</a> </div> */}
-            <div className={style.item}> <NavLink activeClassName={style.active} to='/dialogs' onlyActiveOnIndex>Dialogs</NavLink> </div>
-            <div className={style.item}> <NavLink activeClassName={style.active} to='/profile' onlyActiveOnIndex>Profile</NavLink> </div>
+            <div className={style.item}> <NavLink to='/dialogs'>Dialogs</NavLink> </div>
+            <div className={style.item}> <NavLink to='/profile'>Profile</NavLink> </div>
+
+            <div> 
+                {/* <BestFriends state={props.state}/>  */}
+            </div>
         </nav>
     )
 }

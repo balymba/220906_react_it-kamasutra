@@ -1,6 +1,9 @@
 .content{
     grid-area: c;
     background-color: #e8e8e8;
-    margin: 5px;
-    
+    margin: 5px;   
+}
+
+button{
+    margin-bottom: 10px;
 }

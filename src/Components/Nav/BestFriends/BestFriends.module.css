@@ -1,0 +1,20 @@
+.listTopFriends{
+    /* display: inline-block;
+    padding-right: 0px; */
+    vertical-align:middle;
+    display:inline;
+}
+
+.listTopFriends img{
+    vertical-align:middle;
+    width: 14%;
+    border-radius: 20px;
+    padding-left: 5px;
+}
+
+.text{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(78, 35, 177, 0.507);
+}
